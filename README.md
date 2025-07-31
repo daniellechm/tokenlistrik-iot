@@ -36,4 +36,12 @@ Proyek ini bersifat open-source. Silakan digunakan, dimodifikasi, atau dikembang
 
 ![Alat Utama](dokumentasi/tampak-keseluruhan-alat.jpg)
 
-Gambar: Tampilan alat yang sudah dirakit dan siap diuji coba.
+**Gambar**: Tampilan alat yang sudah dirakit dan siap diuji coba.
+
+![Alat Implementasi Meteran](dokumentasi/implementasi-meteran.jpg)
+
+**Gambar**: Tampilan alat sebagai meteran listrik
+
+![Alat Implementasi Solenoid pada Keypad](dokumentasi/implementasi-meteran-solenoid.jpg)
+
+**Gambar**: Tampilan alat sebagai meteran listrik
