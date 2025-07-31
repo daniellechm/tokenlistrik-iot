@@ -45,3 +45,12 @@ Proyek ini bersifat open-source. Silakan digunakan, dimodifikasi, atau dikembang
 ![Alat Implementasi Solenoid pada Keypad](dokumentasi/implementasi-meteran-solenoid.jpg)
 
 **Gambar**: Tampilan solenoid sebagai penekan keypad pada implementasi meteran
+
+![Tampilan Blynk](dokumentasi/tampilan-blynk.jpg)
+
+**Gambar**: Tampilan melakukan pengisian token listrik melalui Blynk
+
+![Tampilan Telegram](dokumentasi/tampilan-telegram.jpg)
+
+**Gambar**: Tampilan melakukan monitoring sisa token listrik secara otomatis maupun manual melalui Telegram
+
