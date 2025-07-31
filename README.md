@@ -31,3 +31,9 @@ Untuk melakukan pengisian ini melalui **Blynk**, dan monitoring ini melalui **Te
 
 ## 📎 Lisensi
 Proyek ini bersifat open-source. Silakan digunakan, dimodifikasi, atau dikembangkan lebih lanjut untuk keperluan akademik maupun pribadi.
+
+## Dokumentasi Alat
+
+![Alat Utama](dokumentasi/tampak-keseluruhan-alat.jpg)
+
+Gambar: Tampilan alat yang sudah dirakit dan siap diuji coba.
