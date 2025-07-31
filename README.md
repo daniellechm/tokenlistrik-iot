@@ -10,6 +10,7 @@ Untuk melakukan pengisian ini melalui **Blynk**, dan monitoring ini melalui **Te
 - ESP32-CAM (Pengambil gambar layar meteran)
 - RTC DS3231 (Real-time clock untuk penjadwalan)
 - PC (menjalankan skrip Python & OCR)
+- Blynk
 - Telegram Bot
 - Firebase Realtime Database
 
@@ -22,10 +23,10 @@ Untuk melakukan pengisian ini melalui **Blynk**, dan monitoring ini melalui **Te
 - 🌐 Komunikasi ESP32 ke PC via HTTP GET
 
 ## 🗂 Struktur File
-➡️ bot_ocr_esp32_firebase.py       # Script utama Python untuk kamera, OCR, Firebase, dan Telegram
-↪️ firebase_config.json            # Konfigurasi koneksi ke Firebase
-↪️ ds3231.ino                      # Kode Arduino untuk ESP32 + RTC DS3231
-↪️ image.jpg                       # Gambar token yang akan diproses
+1. bot_ocr_esp32_firebase.py         # Script utama Python untuk kamera, OCR, Firebase, dan Telegram
+   - firebase_config.json            # Konfigurasi koneksi ke Firebase
+   - ds3231.ino                      # Kode Arduino untuk ESP32 + RTC DS3231
+   - image.jpg                       # Gambar token yang akan diproses
 
 ## 📷 Alur Sistem Pengisian Token Listrik
 1. Pengguna melakukan input nomor pengisian token listrik pada TextInput melalui Blynk
