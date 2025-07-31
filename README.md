@@ -44,4 +44,4 @@ Proyek ini bersifat open-source. Silakan digunakan, dimodifikasi, atau dikembang
 
 ![Alat Implementasi Solenoid pada Keypad](dokumentasi/implementasi-meteran-solenoid.jpg)
 
-**Gambar**: Tampilan alat sebagai meteran listrik
+**Gambar**: Tampilan solenoid sebagai penekan keypad pada implementasi meteran
