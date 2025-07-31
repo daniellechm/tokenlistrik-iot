@@ -1,9 +1,8 @@
-# tokenlistrik-iot
+# Smart Token Monitoring & Input System using ESP32, ESP32-CAM, OCR, Telegram & Blynk
 
-## 📘 Deskripsi Proyek
+## 📌 Deskripsi Proyek
 Sistem ini dirancang untuk membantu pengguna untuk melakukan pengisian dan monitoring **sisa token listrik&** secara otomatis menggunakan kombinasi **ESP32**, **ESP32-CAM**, **RTC DS3231**, dan **OCR (Optical Character Recognition)**.
 Untuk melakukan pengisian ini melalui **Blynk**, dan monitoring ini melalui **Telegram Bot**, pengguna dapat melakukan input nomor pengisian token listrik pada Blynk dan pengguna dapat mengirim perintah atau mengatur jadwal pengecekan token. Gambar dari layar 7-segment diambil oleh ESP32-CAM, diproses oleh PC dengan Python, dan hasilnya dikirim kembali melalui Telegram serta disimpan ke Firebase.
-
 
 ## 🧩 Komponen Sistem
 - ESP32 38 Pin (Mikrokontroler utama)
@@ -15,56 +14,20 @@ Untuk melakukan pengisian ini melalui **Blynk**, dan monitoring ini melalui **Te
 - Firebase Realtime Database
 
 ## 🚀 Fitur Utama
-- ⬇️ Pengisian nomor token listrik melalui Blynk dan menggerakkan solenoid sebagai penekan keypad pada Meteran
-- 📸 Ambil gambar angka dari meteran token listrik menggunakan ESP32-CAM
-- 🕒 Penjadwalan pengecekan otomatis berdasarkan jam dari RTC DS3231
-- 🤖 Perintah manual `/cektoken` melalui Telegram
-- 📤 Kirim hasil OCR ke Firebase dan Telegram
-- 🌐 Komunikasi ESP32 ke PC via HTTP GET
+1. Pengecekan Token Otomatis
+   - Mengambil gambar display KWH meter menggunakan ESP32-CAM berdasarkan jadwal dari Firebase.
+   - Melakukan OCR (pengenalan karakter) untuk membaca sisa token.
+   - Mengirim hasil ke Firebase dan Telegram secara otomatis.
+2. Pengecekan Manual via Telegram
+   - Melalui perintah /cektoken, pengguna dapat memicu pengambilan gambar dan menerima sisa token melalui bot Telegram.
+3. Pengisian Token via Blynk
+   - Sistem menggunakan relay dan solenoid untuk menekan tombol fisik keypad token.
+   - Nomor token dikirim dari aplikasi Blynk, lalu solenoid menekan angka-angka token secara otomatis.
 
-## 🗂 Struktur File
-1. bot_ocr_esp32_firebase.py         # Script utama Python untuk kamera, OCR, Firebase, dan Telegram
-   - firebase_config.json            # Konfigurasi koneksi ke Firebase
-   - ds3231.ino                      # Kode Arduino untuk ESP32 + RTC DS3231
-   - image.jpg                       # Gambar token yang akan diproses
+## 📲 Cara Kerja Singkat
+1. Telegram menerima perintah /cektoken → kamera aktif → gambar diproses → hasil dikirim kembali ke Telegram dan Firebase.
+2. Sistem pengecekan otomatis dilakukan berdasarkan waktu dari RTC dan jadwal dari Firebase.
+3. Jika token habis, pengguna bisa mengisi melalui aplikasi Blynk → sistem menekan keypad sesuai nomor token yang diberikan.
 
-## 📷 Alur Sistem Pengisian Token Listrik
-1. Pengguna melakukan input nomor pengisian token listrik pada TextInput melalui Blynk
-2. Pengguna menekan tombol Enter pada Keyboard
-3. Solenoid bergerak sesuai nomor yang dimasukkan oleh pengguna
-
-## 📷 Alur Sistem Monitoring Sisa Token
-1. **Pengguna kirim perintah** `/cektoken` atau sistem aktif otomatis berdasarkan RTC.
-2. ESP32 mengirim perintah ke ESP32-CAM untuk mengambil **gambar layar 7-segment**.
-3. Gambar dikirim ke PC melalui HTTP → diproses dengan **OCR (Tesseract / OpenCV)**.
-4. Hasil angka dikirim ke:
-   - Firebase Realtime Database
-   - Telegram Bot pengguna
-
-## 💬 Contoh Output Telegram
-pengecekan otomatis jam 12:00
-sisa token kamu:
-127
-
-## 🔧 Setup dan Instalasi
-### 1. Siapkan Firebase
-- Buat project di Firebase
-- Tambahkan Realtime Database
-- Unduh kredensial admin (`firebase_config.json`)
-
-### 2. Buat Telegram Bot
-- Cari `@BotFather` di Telegram
-- Buat bot baru → Simpan Token
-
-### 3. Instal Dependensi Python
-```bash
-pip install pyTelegramBotAPI firebase-admin opencv-python pytesseract flask requests
-
-Pastikan Tesseract OCR sudah terinstal:
-Windows: https://github.com/tesseract-ocr/tesseract
-Tambahkan PATH Tesseract ke environment variable jika diperlukan
-
-### 4. Upload ds3231.ino ke ESP32
-- Pastikan koneksi RTC DS3231 benar
-- Ganti WiFi SSID dan password di sketch
-- Pastikan URL PC sudah sesuai (http://<IP_PC>:<PORT>/autocapture)
+## 📎 Lisensi
+Proyek ini bersifat open-source. Silakan digunakan, dimodifikasi, atau dikembangkan lebih lanjut untuk keperluan akademik maupun pribadi.
