@@ -1,7 +1,7 @@
 // ============ BLYNK ============
-#define BLYNK_TEMPLATE_ID "TMPL6M_6lgUDV"
-#define BLYNK_TEMPLATE_NAME "Pengisian dan Monitoring Token Listrik"
-#define BLYNK_AUTH_TOKEN "c8o-keEc4FSD4-NMesR7bNYbWYSsRKmZ"
+#define BLYNK_TEMPLATE_ID "*"
+#define BLYNK_TEMPLATE_NAME "*"
+#define BLYNK_AUTH_TOKEN "*"
 
 #include <WiFi.h>
 #include <BlynkSimpleEsp32.h>
@@ -15,14 +15,14 @@
 #include "time.h"
 
 // ============ WiFi & Auth ============
-#define WIFI_SSID "fearnot"
-#define WIFI_PASSWORD "12345678"
+#define WIFI_SSID "*"
+#define WIFI_PASSWORD "*"
 
 // Firebase config
-#define API_KEY "AIzaSyAo99F_TSgzOakekQYpeu0tr1lA5qgOr0A"
-#define DATABASE_URL "https://esp32cam-token-default-rtdb.firebaseio.com/"
-#define USER_EMAIL "danielchuman20@gmail.com"
-#define USER_PASSWORD "EL22not20"
+#define API_KEY "*"
+#define DATABASE_URL "*"
+#define USER_EMAIL "*"
+#define USER_PASSWORD "*"
 
 // ============ Firebase Object ============
 FirebaseData fbdo;
